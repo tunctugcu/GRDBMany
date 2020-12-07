@@ -9,8 +9,8 @@ import Foundation
 import GRDB
 
 struct AuthorInfo: Decodable, FetchableRecord {
-    static let request = Author.including(all: Author.books)
+    static let request = Author.including(optional: Author.book)
     
     let author: Author
-    let books: [Book]
+    let book: Book?
 }

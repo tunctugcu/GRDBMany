@@ -13,10 +13,10 @@ struct Author: Codable, FetchableRecord, MutablePersistableRecord {
     var name: String
     
     
-    static let books = hasMany(Book.self)
+    static let book = hasOne(Book.self)
     
-    var books: QueryInterfaceRequest<Book> {
-        return request(for: Self.books)
+    var book: QueryInterfaceRequest<Book> {
+        return request(for: Self.book)
     }
     
     mutating func didInsert(with rowID: Int64, for column: String?) {

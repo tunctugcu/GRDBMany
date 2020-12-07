@@ -22,7 +22,8 @@ final class ViewController: UIViewController {
         do {
             try createTable()
             try insertTestRecords()
-            try readAuthorInfoRecords()
+//            try readAuthorInfoRecords()
+            try readAuthorWithLines()
         } catch {
             print(error.localizedDescription)
         }
@@ -71,9 +72,16 @@ extension ViewController {
             
             try book1.save(db)
             
-            var book2 = Book(id: nil, authorId: author.id!, name: "Book 2")
+//            var book2 = Book(id: nil, authorId: author.id!, name: "Book 2")
+//
+//            try book2.save(db)
             
-            try book2.save(db)
+            
+            var importantLine1 = ImportantLine(id: nil, bookId: book1.id!, line: 5)
+            var importantLine2 = ImportantLine(id: nil, bookId: book1.id!, line: 3)
+            
+            try importantLine1.save(db)
+            try importantLine2.save(db)
         }
     }
 }
@@ -91,6 +99,14 @@ extension ViewController {
         print(results)
     }
     
-    
+    private func readAuthorWithLines() throws {
+        let request = AuthorBooksImportantLines.request
+        
+        let result: AuthorBooksImportantLines? = try pool.read { db in
+            try AuthorBooksImportantLines.fetchOne(db, request)
+        }
+        
+        print(result?.book?.importantLines.count)
+    }
 }
 
