@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		38C455BF257DB2CC002321CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C455BD257DB2CC002321CD /* Main.storyboard */; };
 		38C455C1257DB2CC002321CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C455C0257DB2CC002321CD /* Assets.xcassets */; };
 		38C455C4257DB2CD002321CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C455C2257DB2CD002321CD /* LaunchScreen.storyboard */; };
+		38C455CE257DB3B7002321CD /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 38C455CD257DB3B7002321CD /* GRDB */; };
+		38C455D1257DB3C5002321CD /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C455D0257DB3C5002321CD /* Author.swift */; };
+		38C455D4257DB440002321CD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C455D3257DB440002321CD /* Book.swift */; };
+		38C455D7257DB77B002321CD /* AuthorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C455D6257DB77B002321CD /* AuthorInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		38C455C0257DB2CC002321CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C455C3257DB2CD002321CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38C455C5257DB2CD002321CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38C455D0257DB3C5002321CD /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		38C455D3257DB440002321CD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		38C455D6257DB77B002321CD /* AuthorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C455CE257DB3B7002321CD /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,9 @@
 				38C455C0257DB2CC002321CD /* Assets.xcassets */,
 				38C455C2257DB2CD002321CD /* LaunchScreen.storyboard */,
 				38C455C5257DB2CD002321CD /* Info.plist */,
+				38C455D0257DB3C5002321CD /* Author.swift */,
+				38C455D3257DB440002321CD /* Book.swift */,
+				38C455D6257DB77B002321CD /* AuthorInfo.swift */,
 			);
 			path = GRDBMany;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = GRDBMany;
+			packageProductDependencies = (
+				38C455CD257DB3B7002321CD /* GRDB */,
+			);
 			productName = GRDBMany;
 			productReference = 38C455B4257DB2CC002321CD /* GRDBMany.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 38C455AB257DB2CC002321CD;
+			packageReferences = (
+				38C455CC257DB3B7002321CD /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
 			productRefGroup = 38C455B5257DB2CC002321CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +156,9 @@
 			files = (
 				38C455BC257DB2CC002321CD /* ViewController.swift in Sources */,
 				38C455B8257DB2CC002321CD /* AppDelegate.swift in Sources */,
+				38C455D1257DB3C5002321CD /* Author.swift in Sources */,
+				38C455D4257DB440002321CD /* Book.swift in Sources */,
+				38C455D7257DB77B002321CD /* AuthorInfo.swift in Sources */,
 				38C455BA257DB2CC002321CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38C455CC257DB3B7002321CD /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38C455CD257DB3B7002321CD /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38C455CC257DB3B7002321CD /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38C455AC257DB2CC002321CD /* Project object */;
 }
