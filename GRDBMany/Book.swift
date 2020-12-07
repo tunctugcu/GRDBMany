@@ -19,6 +19,12 @@ struct Book: Codable, FetchableRecord, MutablePersistableRecord {
         return request(for: Self.author)
     }
     
+    static let importantLines = hasMany(ImportantLine.self)
+    
+    var importantLines: QueryInterfaceRequest<ImportantLine> {
+        return request(for: Self.importantLines)
+    }
+    
     mutating func didInsert(with rowID: Int64, for column: String?) {
         id = rowID
     }

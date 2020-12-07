@@ -17,6 +17,7 @@
 		38C455D1257DB3C5002321CD /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C455D0257DB3C5002321CD /* Author.swift */; };
 		38C455D4257DB440002321CD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C455D3257DB440002321CD /* Book.swift */; };
 		38C455D7257DB77B002321CD /* AuthorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C455D6257DB77B002321CD /* AuthorInfo.swift */; };
+		38C455DA257DB8FF002321CD /* ImportantLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C455D9257DB8FF002321CD /* ImportantLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		38C455D0257DB3C5002321CD /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		38C455D3257DB440002321CD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		38C455D6257DB77B002321CD /* AuthorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorInfo.swift; sourceTree = "<group>"; };
+		38C455D9257DB8FF002321CD /* ImportantLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				38C455D0257DB3C5002321CD /* Author.swift */,
 				38C455D3257DB440002321CD /* Book.swift */,
 				38C455D6257DB77B002321CD /* AuthorInfo.swift */,
+				38C455D9257DB8FF002321CD /* ImportantLine.swift */,
 			);
 			path = GRDBMany;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				38C455BC257DB2CC002321CD /* ViewController.swift in Sources */,
 				38C455B8257DB2CC002321CD /* AppDelegate.swift in Sources */,
+				38C455DA257DB8FF002321CD /* ImportantLine.swift in Sources */,
 				38C455D1257DB3C5002321CD /* Author.swift in Sources */,
 				38C455D4257DB440002321CD /* Book.swift in Sources */,
 				38C455D7257DB77B002321CD /* AuthorInfo.swift in Sources */,

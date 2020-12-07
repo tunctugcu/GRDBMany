@@ -22,7 +22,7 @@ final class ViewController: UIViewController {
         do {
             try createTable()
             try insertTestRecords()
-            try readRecords()
+            try readAuthorInfoRecords()
         } catch {
             print(error.localizedDescription)
         }
@@ -51,6 +51,15 @@ extension ViewController {
                 t.column("name", .text).notNull().check{ length($0) > 0 }
             }
             
+            // Create Important Line
+            try db.create(table: "importantLine") { t in
+                t.autoIncrementedPrimaryKey("id")
+                t.column("bookId", .integer)
+                    .indexed()
+                    .references("book", onDelete: .cascade)
+                    .notNull()
+                t.column("line", .integer).notNull()
+            }
         }
     }
     
@@ -67,17 +76,21 @@ extension ViewController {
             try book2.save(db)
         }
     }
-    
-    
-    private func readRecords() throws {
+}
+
+
+// MARK: - Test functions
+extension ViewController {
+    private func readAuthorInfoRecords() throws {
         let request = AuthorInfo.request
-        
+
         let results = try pool.read { db in
             try AuthorInfo.fetchAll(db, request)
         }
-        
+
         print(results)
     }
+    
     
 }
 
