@@ -68,20 +68,36 @@
 		38C455B6257DB2CC002321CD /* GRDBMany */ = {
 			isa = PBXGroup;
 			children = (
+				38C455C5257DB2CD002321CD /* Info.plist */,
 				38C455B7257DB2CC002321CD /* AppDelegate.swift */,
 				38C455B9257DB2CC002321CD /* SceneDelegate.swift */,
 				38C455BB257DB2CC002321CD /* ViewController.swift */,
-				38C455BD257DB2CC002321CD /* Main.storyboard */,
 				38C455C0257DB2CC002321CD /* Assets.xcassets */,
 				38C455C2257DB2CD002321CD /* LaunchScreen.storyboard */,
-				38C455C5257DB2CD002321CD /* Info.plist */,
-				38C455D0257DB3C5002321CD /* Author.swift */,
-				38C455D3257DB440002321CD /* Book.swift */,
-				38C455D6257DB77B002321CD /* AuthorInfo.swift */,
-				38C455D9257DB8FF002321CD /* ImportantLine.swift */,
-				38C455DC257DBA4D002321CD /* AuthorBooksImportantLines.swift */,
+				38C455BD257DB2CC002321CD /* Main.storyboard */,
+				38C455E2257DBE2D002321CD /* Associations */,
+				38C455E1257DBE22002321CD /* Models */,
 			);
 			path = GRDBMany;
+			sourceTree = "<group>";
+		};
+		38C455E1257DBE22002321CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38C455D0257DB3C5002321CD /* Author.swift */,
+				38C455D3257DB440002321CD /* Book.swift */,
+				38C455D9257DB8FF002321CD /* ImportantLine.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38C455E2257DBE2D002321CD /* Associations */ = {
+			isa = PBXGroup;
+			children = (
+				38C455D6257DB77B002321CD /* AuthorInfo.swift */,
+				38C455DC257DBA4D002321CD /* AuthorBooksImportantLines.swift */,
+			);
+			path = Associations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
